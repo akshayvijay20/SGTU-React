@@ -1,14 +1,56 @@
-import React from "react";
+import React, { useEffect } from "react";
 import eventImg from "../../../event_5.jpg";
+import jpgCourses from "./Assets/Images/courses.jpg";
+import pngCourses from "./Assets/Images/courses.png";
+import jpgELectures from "./Assets/Images/E-Lectures.jpg";
+import pngELectures from "./Assets/Images/E-Lectures.png";
+import jpgFaculties from "./Assets/Images/faculties.jpg";
+import pngFaculties from "./Assets/Images/faculties.png";
+import jpgLabs from "./Assets/Images/labs.jpg";
+import pngLabs from "./Assets/Images/labs.png";
+import jpgLibrary from "./Assets/Images/library.jpg";
+import pngLibrary from "./Assets/Images/library.png";
+import jpgOnlineCourse from "./Assets/Images/onlineCourse.jpg";
+import pngOnlineCourse from "./Assets/Images/onlineCourse.png";
 
-const NIRF = () => {
+//slide animation is not working
+
+const StatSection = () => {
+  // useEffect(() => {
+  //   const elements = document.querySelectorAll(".animateThis");
+  //   elements.forEach((element) => {
+  //     const rect = element.getBoundingClientRect();
+  //     const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+  //     if (isInView) {
+  //       element.classList.add("in-view");
+  //     }
+  //   });
+
+  //   const handleScroll = () => {
+  //     elements.forEach((element) => {
+  //       const rect = element.getBoundingClientRect();
+  //       const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+  //       if (isInView) {
+  //         element.classList.add("in-view");
+  //       }
+  //     });
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //     elements.forEach((element) => {
+  //       element.classList.remove("in-view");
+  //     });
+  //   };
+  // }, []);
   return (
     <section className='statSection my-14 lg:my-20'>
       <div className='container mx-auto px-3'>
         <div className='grid lg:grid-cols-5 md:grid-cols-6 grid-cols-2 sm:gap-5 gap-3'>
           <div className='statItem animateThis slideRight md:row-span-2 lg:col-span-1 md:col-span-2'>
             <a href='a-z_list.html' className='statBox flex'>
-              <img src={eventImg} className='sfimg_course' />
+              <img src={jpgCourses} className='sfimg_course' alt='Courses' />
               <div className='statFigure'>
                 <div className='sfCount'>
                   <span className='countNo' data-count='180'>
@@ -22,7 +64,11 @@ const NIRF = () => {
           </div>
           <div className='statItem animateThis slideTop lg:col-span-1 md:col-span-2'>
             <a href='#facultySection' className='statBox flex'>
-              <img src={eventImg} className='sfimg_faculty' />
+              <img
+                src={jpgFaculties}
+                className='sfimg_faculty'
+                alt='Faculties'
+              />
               <div className='statFigure'>
                 <div className='sfCount'>
                   <span className='countNo' data-count='18'>
@@ -39,7 +85,11 @@ const NIRF = () => {
               target='_blank'
               className='statBox flex'
             >
-              <img src={eventImg} className='sfimg_electure' />
+              <img
+                src={jpgELectures}
+                className='sfimg_electure'
+                alt='E-Lectures'
+              />
               <div className='statFigure'>
                 <div className='sfCount'>
                   <span className='countNo' data-count='8000'>
@@ -53,10 +103,7 @@ const NIRF = () => {
           </div>
           <div className='statItem animateThis slideLeft lg:col-span-1 md:col-span-4'>
             <a href='research/research-labs.html' className='statBox flex'>
-              <img
-                src='assets/images/homepage/stats/labs.jpg'
-                className='sfimg_lab'
-              />
+              <img src={jpgLabs} className='sfimg_lab' alt='Labs' />
               <div className='statFigure'>
                 <div className='sfCount'>
                   <span className='countNo' data-count='4000'>
@@ -74,7 +121,7 @@ const NIRF = () => {
               target='_blank'
               className='statBox flex'
             >
-              <img src={eventImg} className='sfimg_library' />
+              <img src={jpgLibrary} className='sfimg_library' alt='Library' />
               <div className='statFigure'>
                 <div className='sfCount'>
                   <span className='countNo' data-count='82500'>
@@ -88,7 +135,11 @@ const NIRF = () => {
           </div>
           <div className='statItem animateThis slideRight lg:col-span-2 md:col-span-3'>
             <a href='alumni.html' className='statBox flex'>
-              <img src={eventImg} className='sfimg_online' />
+              <img
+                src={jpgOnlineCourse}
+                className='sfimg_online'
+                alt='Online'
+              />
               <div className='statFigure'>
                 <div className='sfCount'>
                   <span className='countNo' data-count='10000'>
@@ -101,56 +152,118 @@ const NIRF = () => {
             </a>
           </div>
         </div>
-
-        {/* <div className="grid md:grid-cols-4 md:grid-rows-2 grid-cols-2 grid-row-3 lg:gap-5 sm:gap-3 gap-2 statGrid titleFont hidden">
-                    <div className="statItem md:order-1 animateThis fadeGrow">
-                        <div className="statBox flex">
-                            <img src="assets/images/homepage/stats/books.png" className="sfimg_book"/>
-                            <div className="statFigure text-right">
-                                <div className="sfCount"><span className="countNo" data-count="18">0</span></div>
-                                <div className="sfText">Faculties</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="statItem md:order-3 animateThis fadeGrow">
-                        <div className="statBox flex">
-                            <img src="assets/images/homepage/stats/flask.png" className="sfimg_flask"/>
-                            <div className="statFigure">
-                                <div className="sfCount"><span className="countNo" data-count="170">0</span>+</div>
-                                <div className="sfText">Labs</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="statItem col-span-2 md:row-span-2 md:order-2 animateThis fadeGrow">
-                        <div className="statBox flex">
-                            <img src="assets/images/homepage/stats/girl.png" className="sfimg_girl"/>
-                            <div className="statFigure big">
-                                <div className="sfCount"><span className="countNo" data-count="180">0</span>+</div>
-                                <div className="sfText">Courses</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="statItem md:order-4 animateThis fadeGrow">
-                        <div className="statBox flex items-end">
-                            <img src="assets/images/homepage/stats/scroll.png" className="sfimg_scroll"/>
-                            <div className="statFigure text-right">
-                                <div className="sfCount"><span className="countNo" data-count="770">0</span></div>
-                                <div className="sfText">Online Course Module</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="statItem md:order-5 animateThis fadeGrow">
-                        <div className="statBox flex">
-                            <img src="assets/images/homepage/stats/man.png" className="sfimg_man"/>
-                            <div className="statFigure">
-                                <div className="sfCount"><span className="countNo" data-count="8000">0</span>+</div>
-                                <div className="sfText">E-Lectures</div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
       </div>
     </section>
+
+    // <section className='statSection my-14 lg:my-20'>
+    //   <div className='container mx-auto px-3'>
+    //     <div className='grid lg:grid-cols-5 md:grid-cols-6 grid-cols-2 sm:gap-5 gap-3'>
+    //       <div className='statItem animateThis  md:row-span-2 lg:col-span-1 md:col-span-2'>
+    //         <a href='a-z_list.html' className='statBox flex'>
+    //           <img src={jpgCourses} className='sfimg_course' alt='Courses' />
+    //           <div className='statFigure'>
+    //             <div className='sfCount'>
+    //               <span className='countNo' data-count='180'>
+    //                 0
+    //               </span>
+    //               +
+    //             </div>
+    //             <div className='sfText'>Courses Offered</div>
+    //           </div>
+    //         </a>
+    //       </div>
+    //       <div className='statItem animateThis  lg:col-span-1 md:col-span-2'>
+    //         <a href='#facultySection' className='statBox flex'>
+    //           <img
+    //             src={jpgFaculties}
+    //             className='sfimg_faculty'
+    //             alt='Faculties'
+    //           />
+    //           <div className='statFigure'>
+    //             <div className='sfCount'>
+    //               <span className='countNo' data-count='18'>
+    //                 0
+    //               </span>
+    //             </div>
+    //             <div className='sfText'>Faculties</div>
+    //           </div>
+    //         </a>
+    //       </div>
+    //       <div className='statItem animateThis  lg:col-span-2 md:col-span-2'>
+    //         <a
+    //           href='https://www.youtube.com/playlist?list=PLrTvGdxJHsrgwFX61uW-VKxsbnsc5kDC8'
+    //           target='_blank'
+    //           className='statBox flex'
+    //         >
+    //           <img
+    //             src={jpgELectures}
+    //             className='sfimg_electure'
+    //             alt='E-Lectures'
+    //           />
+    //           <div className='statFigure'>
+    //             <div className='sfCount'>
+    //               <span className='countNo' data-count='8000'>
+    //                 0
+    //               </span>
+    //               +
+    //             </div>
+    //             <div className='sfText'>e-Lectures</div>
+    //           </div>
+    //         </a>
+    //       </div>
+    //       <div className='statItem animateThis  lg:col-span-1 md:col-span-4'>
+    //         <a href='research/research-labs.html' className='statBox flex'>
+    //           <img src={jpgLabs} className='sfimg_lab' alt='Labs' />
+    //           <div className='statFigure'>
+    //             <div className='sfCount'>
+    //               <span className='countNo' data-count='4000'>
+    //                 0
+    //               </span>
+    //               +
+    //             </div>
+    //             <div className='sfText'>Research & Publications</div>
+    //           </div>
+    //         </a>
+    //       </div>
+    //       <div className='statItem animateThis  lg:col-span-2 md:col-span-3'>
+    //         <a
+    //           href='http://1.6.136.107/'
+    //           target='_blank'
+    //           className='statBox flex'
+    //         >
+    //           <img src={jpgLibrary} className='sfimg_library' alt='Library' />
+    //           <div className='statFigure'>
+    //             <div className='sfCount'>
+    //               <span className='countNo' data-count='82500'>
+    //                 0
+    //               </span>
+    //               +
+    //             </div>
+    //             <div className='sfText'>Books in 6 Libraries</div>
+    //           </div>
+    //         </a>
+    //       </div>
+    //       <div className='statItem animateThis  lg:col-span-2 md:col-span-3'>
+    //         <a href='alumni.html' className='statBox flex'>
+    //           <img
+    //             src={jpgOnlineCourse}
+    //             className='sfimg_online'
+    //             alt='Online'
+    //           />
+    //           <div className='statFigure'>
+    //             <div className='sfCount'>
+    //               <span className='countNo' data-count='10000'>
+    //                 0
+    //               </span>
+    //               +
+    //             </div>
+    //             <div className='sfText'>Alumni Network</div>
+    //           </div>
+    //         </a>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </section>
   );
 };
-export default NIRF;
+export default StatSection;

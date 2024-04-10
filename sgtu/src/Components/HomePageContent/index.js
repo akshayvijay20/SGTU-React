@@ -11,6 +11,7 @@ import FacultySection from "./FacultySection";
 import LatestHappeningSection from "./LatestHappeningSection";
 import StatSection from "./StatSection";
 import TestimonialSection from "./TestimonialSection";
+import "../../App.css";
 
 const HomePageContent = () => {
   return (

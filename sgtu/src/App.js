@@ -1,4 +1,6 @@
 import logo from "./logo.svg";
+
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import "./homePage.css";
 import clgImg from "./sgtu_Logo.png";
@@ -91,6 +93,32 @@ const blogData = [
 ];
 
 const App = () => {
+  useEffect(() => {
+    const elements = document.querySelectorAll(".animateThis");
+
+    const handleScroll = () => {
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+        if (isInView && !element.classList.contains("in-view")) {
+          element.classList.add("in-view");
+        } else if (!isInView && element.classList.contains("in-view")) {
+          element.classList.remove("in-view");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Initial check on component mount
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className='App'>
       <Header />

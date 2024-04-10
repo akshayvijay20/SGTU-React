@@ -1,14 +1,15 @@
 import React from "react";
+import sgtuFootLogo from "./sgtuFootLogo.svg";
 
 const Footer = () => {
   return (
-    <footer class='pageFooter lg:py-14 py-10'>
-      <div class='container mx-auto md:px-5 px-3'>
-        <div class='grid lg:grid-cols-4 md:grid-cols-3 gap-x-5 md:gap-y-10 gap-y-5 lg:mb-14 mb-5'>
-          <div class='footMenu'>
-            <div class='titleFont footMenuHead'>Admissions</div>
-            <div class='footMenuContent'>
-              <ul class='footMenuLinks'>
+    <footer className='pageFooter lg:py-14 py-10'>
+      <div className='container mx-auto md:px-5 px-3'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-3 gap-x-5 md:gap-y-10 gap-y-5 lg:mb-14 mb-5'>
+          <div className='footMenu'>
+            <div className='titleFont footMenuHead'>Admissions</div>
+            <div className='footMenuContent'>
+              <ul className='footMenuLinks'>
                 <li>
                   <a href='admissions/apply-online.html'>Admission</a>
                 </li>
@@ -54,10 +55,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class='footMenu'>
-            <div class='titleFont footMenuHead'>Important Links</div>
-            <div class='footMenuContent'>
-              <ul class='footMenuLinks'>
+          <div className='footMenu'>
+            <div className='titleFont footMenuHead'>Important Links</div>
+            <div className='footMenuContent'>
+              <ul className='footMenuLinks'>
                 <li>
                   <a href='careers.html'>Careers</a>
                 </li>
@@ -97,10 +98,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class='footMenu'>
-            <div class='titleFont footMenuHead'>Useful Links</div>
-            <div class='footMenuContent'>
-              <ul class='footMenuLinks'>
+          <div className='footMenu'>
+            <div className='titleFont footMenuHead'>Useful Links</div>
+            <div className='footMenuContent'>
+              <ul className='footMenuLinks'>
                 <li>
                   <a href='alumni.html'>Alumni</a>
                 </li>
@@ -130,10 +131,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class='footMenu'>
-            <div class='titleFont footMenuHead'>Connect With Us</div>
-            <div class='footMenuContent'>
-              <ul class='footMenuLinks'>
+          <div className='footMenu'>
+            <div className='titleFont footMenuHead'>Connect With Us</div>
+            <div className='footMenuContent'>
+              <ul className='footMenuLinks'>
                 <li>
                   <a href=''>Contact Us</a>
                 </li>
@@ -162,10 +163,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class='footMenu'>
-            <div class='titleFont footMenuHead'>Grow With Us</div>
-            <div class='footMenuContent'>
-              <ul class='footMenuLinks'>
+          <div className='footMenu'>
+            <div className='titleFont footMenuHead'>Grow With Us</div>
+            <div className='footMenuContent'>
+              <ul className='footMenuLinks'>
                 <li>
                   <a href='corporate-resource-center.html'>Placements</a>
                 </li>
@@ -186,10 +187,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class='footMenu'>
-            <div class='titleFont footMenuHead'>Learn With Us</div>
-            <div class='footMenuContent'>
-              <ul class='footMenuLinks'>
+          <div className='footMenu'>
+            <div className='titleFont footMenuHead'>Learn With Us</div>
+            <div className='footMenuContent'>
+              <ul className='footMenuLinks'>
                 <li>
                   <a href='research/projects.html'>Research & Innovation</a>
                 </li>
@@ -213,13 +214,13 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class='footContact 2xl:col-span-1 lg:col-span-2 md:col-span-3'>
-            <div class='mb-6 mt-10 md:hidden'>
-              {/* <img src="assets/images/sgtuFootLogo.svg" alt="" class="footLogo"> */}
+          <div className='footContact 2xl:col-span-1 lg:col-span-2 md:col-span-3'>
+            <div className='mb-6 mt-10 md:hidden'>
+              <img src={sgtuFootLogo} alt='' className='footLogo' />
             </div>
 
-            <div class='flex flex-row items-center mb-4'>
-              <div class='footContactIcon shrink-0 mr-4'>
+            <div className='flex flex-row items-center mb-4'>
+              <div className='footContactIcon shrink-0 mr-4'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='27'
@@ -230,21 +231,21 @@ const Footer = () => {
                   <path d='M15.4951 34.8814C19.0024 30.4921 27.0014 19.854 27.0014 13.8786C27.0014 6.63162 21.1218 0.751953 13.8747 0.751953C6.62771 0.751953 0.748047 6.63162 0.748047 13.8786C0.748047 19.854 8.74713 30.4921 12.2544 34.8814C13.0953 35.9274 14.6541 35.9274 15.4951 34.8814ZM13.8747 9.50308C15.0352 9.50308 16.1482 9.96408 16.9687 10.7847C17.7893 11.6052 18.2503 12.7182 18.2503 13.8786C18.2503 15.0391 17.7893 16.1521 16.9687 16.9726C16.1482 17.7932 15.0352 18.2542 13.8747 18.2542C12.7143 18.2542 11.6013 17.7932 10.7807 16.9726C9.96017 16.1521 9.49918 15.0391 9.49918 13.8786C9.49918 12.7182 9.96017 11.6052 10.7807 10.7847C11.6013 9.96408 12.7143 9.50308 13.8747 9.50308Z' />
                 </svg>
               </div>
-              <div class=''>
+              <div className=''>
                 Budhera, Gurugram-Badli Road, Gurugram- 122505, Haryana, India.
-                <div class='mt-1'>
+                <div className='mt-1'>
                   <a
                     href='assets/docs/SGT-University-Map.pdf'
                     target='_blank'
-                    class='yellowColor'
+                    className='yellowColor'
                   >
                     Campus Map
                   </a>{" "}
-                  <span class='mx-2'>|</span>
+                  <span className='mx-2'>|</span>
                   <a
                     href='https://maps.app.goo.gl/87184r231fRBWEc37'
                     target='_blank'
-                    class='yellowColor'
+                    className='yellowColor'
                   >
                     Get Directions
                   </a>
@@ -252,8 +253,8 @@ const Footer = () => {
               </div>
             </div>
 
-            <div class='flex flex-row items-center mb-4'>
-              <div class='footContactIcon shrink-0 mr-4'>
+            <div className='flex flex-row items-center mb-4'>
+              <div className='footContactIcon shrink-0 mr-4'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='31'
@@ -264,13 +265,13 @@ const Footer = () => {
                   <path d='M24.5389 30.5061C23.2316 30.5061 21.3952 30.0332 18.6453 28.4968C15.3013 26.6216 12.7147 24.8903 9.38882 21.5731C6.18212 18.3684 4.62163 16.2936 2.43761 12.3193C-0.0296978 7.8321 0.390897 5.47998 0.861053 4.4747C1.42095 3.27319 2.24741 2.55457 3.31564 1.84129C3.92239 1.44376 4.56448 1.10299 5.23377 0.823294C5.30074 0.794495 5.36303 0.767036 5.41862 0.742256C5.75014 0.592904 6.25244 0.367203 6.88869 0.608308C7.3133 0.767706 7.69237 1.09387 8.28576 1.67989C9.50268 2.88006 11.1656 5.55298 11.7791 6.86566C12.191 7.75039 12.4636 8.3344 12.4643 8.9894C12.4643 9.75625 12.0785 10.3476 11.6103 10.9859C11.5226 11.1058 11.4355 11.2203 11.3511 11.3315C10.8415 12.0012 10.7296 12.1948 10.8033 12.5403C10.9527 13.2349 12.0664 15.3023 13.8968 17.1287C15.7272 18.9551 17.7351 19.9985 18.4323 20.1472C18.7926 20.2242 18.9902 20.1077 19.6813 19.58C19.7805 19.5043 19.8823 19.4259 19.9888 19.3476C20.7027 18.8165 21.2666 18.4407 22.0154 18.4407H22.0194C22.6711 18.4407 23.2289 18.7234 24.1532 19.1895C25.3587 19.7976 28.112 21.4391 29.3195 22.6574C29.9069 23.2495 30.2344 23.6272 30.3945 24.0511C30.6356 24.6894 30.4085 25.1897 30.2605 25.5245C30.2357 25.5801 30.2083 25.6411 30.1795 25.7087C29.8976 26.3768 29.5548 27.0176 29.1554 27.6228C28.4435 28.6877 27.7222 29.5122 26.518 30.0727C25.8997 30.3652 25.2229 30.5134 24.5389 30.5061Z' />
                 </svg>
               </div>
-              <div class=''>
+              <div className=''>
                 <a href='tel:18001025661'>1800 102 5661</a>
               </div>
             </div>
 
-            <div class='flex flex-row items-center mb-4'>
-              <div class='footContactIcon shrink-0 mr-4'>
+            <div className='flex flex-row items-center mb-4'>
+              <div className='footContactIcon shrink-0 mr-4'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='33'
@@ -281,7 +282,7 @@ const Footer = () => {
                   <path d='M5.87765 0.00292969C4.45192 0.00292969 3.0846 0.569296 2.07646 1.57743C1.06832 2.58557 0.501953 3.9529 0.501953 5.37862V5.91888L16.629 14.6033L32.7561 5.92157V5.37862C32.7561 3.9529 32.1897 2.58557 31.1816 1.57743C30.1735 0.569296 28.8061 0.00292969 27.3804 0.00292969H5.87765ZM32.7561 8.97227L17.2661 17.3127C17.0703 17.4181 16.8514 17.4732 16.629 17.4732C16.4067 17.4732 16.1878 17.4181 15.992 17.3127L0.501953 8.97227V21.5057C0.501953 22.9314 1.06832 24.2988 2.07646 25.3069C3.0846 26.315 4.45192 26.8814 5.87765 26.8814H27.3804C28.8061 26.8814 30.1735 26.315 31.1816 25.3069C32.1897 24.2988 32.7561 22.9314 32.7561 21.5057V8.97227Z' />
                 </svg>
               </div>
-              <div class=''>
+              <div className=''>
                 <a href='mailto:info@sgtuniversity.org'>
                   info@sgtuniversity.org
                 </a>
@@ -290,16 +291,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div class='md:flex w-full lg:mb-14 mb-10'>
-          <div class='md:mr-20 hidden md:block'>
-            {/* <img src="assets/images/sgtuFootLogo.svg" alt="" class="footLogo"> */}
+        <div className='md:flex w-full lg:mb-14 mb-10'>
+          <div className='md:mr-20 hidden md:block'>
+            <img src={sgtuFootLogo} alt='' className='footLogo' />
           </div>
-          <div class='ml-auto'>
-            <div class='flex justify-center gap-1 socialIcons'>
+          <div className='ml-auto'>
+            <div className='flex justify-center gap-1 socialIcons'>
               <a
                 href='http://www.youtube.com/@SGTUniversityGurgaonNCR'
                 target='_blank'
-                class='youtube'
+                className='youtube'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -312,7 +313,7 @@ const Footer = () => {
               <a
                 href='https://www.instagram.com/sgtuniversity/'
                 target='_blank'
-                class='instagram'
+                className='instagram'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -325,7 +326,7 @@ const Footer = () => {
               <a
                 href='https://www.facebook.com/sgtuniversitygurgaon'
                 target='_blank'
-                class='facebook'
+                className='facebook'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -338,7 +339,7 @@ const Footer = () => {
               <a
                 href='https://www.linkedin.com/school/sgt-university/'
                 target='_blank'
-                class='linkedin'
+                className='linkedin'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -351,7 +352,7 @@ const Footer = () => {
               <a
                 href='https://twitter.com/SGTUniversity'
                 target='_blank'
-                class='twitter'
+                className='twitter'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -365,12 +366,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div class='footSEOLinks py-4 mb-5'>
-          <div class='fslPart my-4'>
-            <div class='titleFont fslHead mb-2'>
+        <div className='footSEOLinks py-4 mb-5'>
+          <div className='fslPart my-4'>
+            <div className='titleFont fslHead mb-2'>
               Most Searched Colleges at SGT University
             </div>
-            <ul class='fslLinks'>
+            <ul className='fslLinks'>
               <li>
                 <a href='engineering/index.html'>Best Engineering College</a>
               </li>
@@ -432,9 +433,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div class='sm:flex w-full text-center'>
-          <div class='mr-auto'>&copy; 2024 SGT University </div>
-          <div class='flex justify-center gap-5'>
+        <div className='sm:flex w-full text-center'>
+          <div className='mr-auto'>&copy; 2024 SGT University </div>
+          <div className='flex justify-center gap-5'>
             <a href=''>Disclaimer</a> <a href=''>Privacy Policy</a>{" "}
             <a href=''>Terms of Use</a>
           </div>

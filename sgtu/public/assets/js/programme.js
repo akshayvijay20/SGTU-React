@@ -1,25 +1,25 @@
-const tabs = document.querySelectorAll('.tab');
-const searchBox = document.getElementById('searchInput');
-const cardContainer = document.querySelector('.card-container');
+const tabs = document.querySelectorAll(".tab");
+const searchBox = document.getElementById("searchInput");
+const cardContainer = document.querySelector(".card-container");
 
 function renderCards(cards) {
   cardContainer.innerHTML = "";
   cards.forEach((card) => {
     cardContainer.innerHTML += `
-        <div id="${card.name}" class="flex colored-faculty-section">
-          <div class="sm:w-1/4 w-2/5">
-            <img src="${card.image}" alt="${card.name}" class="insideFacultyImg">
+        <div id="${card.name}" className="flex colored-faculty-section">
+          <div className="sm:w-1/4 w-2/5">
+            <img src="${card.image}" alt="${card.name}" className="insideFacultyImg">
           </div>
-          <div class="inside-faculty-section sm:w-3/4 w-3/5">
-            <div class="inside-faculty-content px-3 md:px-8">
+          <div className="inside-faculty-section sm:w-3/4 w-3/5">
+            <div className="inside-faculty-content px-3 md:px-8">
               <div>
                 <p>Name</p>
-                <h2 class="cardTitle">${card.name}</h1>
+                <h2 className="cardTitle">${card.name}</h1>
                 <p>Duration</p>
-                <h2 class="cardDuration">${card.duration}</h2>
+                <h2 className="cardDuration">${card.duration}</h2>
               </div>
-              <div class="flex justify-end programme-info">
-                <a href="${card.link}" class="circleBtn cBtnBlack">Programme Info</a>
+              <div className="flex justify-end programme-info">
+                <a href="${card.link}" className="circleBtn cBtnBlack">Programme Info</a>
               </div>
             </div>
           </div>
@@ -57,7 +57,8 @@ tabs.forEach((tab) => {
 searchBox.addEventListener("keyup", () => {
   const keyword = searchBox.value.trim().toLowerCase();
   renderCards(
-    data[getActiveTabType()]
-      .filter((card) => card.name.toLowerCase().includes(keyword))
+    data[getActiveTabType()].filter((card) =>
+      card.name.toLowerCase().includes(keyword)
+    )
   );
 });

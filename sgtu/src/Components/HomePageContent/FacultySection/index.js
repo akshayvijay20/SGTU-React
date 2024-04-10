@@ -1,5 +1,26 @@
 import React from "react";
 import eventImg from "../../../event_5.jpg";
+import agricultureImg from "./Assets/Images/agricultural.png";
+import alliedHealthSciencesImg from "./Assets/Images/alliedHealthSciences.png";
+import aryuvedaImg from "./Assets/Images/Ayurveda.png";
+import behaviouralSciencesImg from "./Assets/Images/BehaviouralSciences.png";
+import commerceManagementImg from "./Assets/Images/commerceManagement.png";
+import dentalScienceImg from "./Assets/Images/DentalScience.png";
+import dotsBgImg from "./Assets/Images/DotsBg.png";
+import educationImg from "./Assets/Images/Education.png";
+import engineeringTechnologyImg from "./Assets/Images/EngineeringTechnology.png";
+import fashionDesignImg from "./Assets/Images/FashionDesign.png";
+import hotelTourismImg from "./Assets/Images/HotelTourism.png";
+import lawImg from "./Assets/Images/Law.png";
+import massMediaImg from "./Assets/Images/MassMedia.png";
+import medicineHealthSciencesImg from "./Assets/Images/MedicineHealthSciences.png";
+import naturopathyYogicSciencesImg from "./Assets/Images/NaturopathyYogicSciences.png";
+import nursingImg from "./Assets/Images/Nursing.png";
+import pharmacyImg from "./Assets/Images/Pharmacy.png";
+import physiotherapyImg from "./Assets/Images/Physiotherapy.png";
+import scienceImg from "./Assets/Images/science.png";
+import xDotsBgJpg from "./Assets/Images/xDotsBg.jpg";
+import xDotsBgPng from "./Assets/Images/xDotsBg.png";
 
 const FacultySection = () => {
   return (
@@ -23,97 +44,70 @@ const FacultySection = () => {
             <div className='swiper-wrapper'>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img src={eventImg} className='facultyImg' />
+                  <img src={alliedHealthSciencesImg} className='facultyImg' />
                   <h3 className='facultyName'>Allied Health Sciences</h3>
                   <a href='./ahs/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/agricultural.png'
-                    className='facultyImg'
-                  />
+                  <img src={agricultureImg} className='facultyImg' />
                   <h3 className='facultyName'>Agricultural Sciences</h3>
                   <a href='./agri/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/BehaviouralSciences.png'
-                    className='facultyImg'
-                  />
+                  <img src={behaviouralSciencesImg} className='facultyImg' />
                   <h3 className='facultyName'>Behavioural Sciences</h3>
                   <a href='./bhs/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/commerceManagement.png'
-                    className='facultyImg'
-                  />
+                  <img src={commerceManagementImg} className='facultyImg' />
                   <h3 className='facultyName'>Commerce & Management</h3>
                   <a href='./cm/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/DentalScience.png'
-                    className='facultyImg'
-                  />
+                  <img src={dentalScienceImg} className='facultyImg' />
                   <h3 className='facultyName'>Dental Sciences</h3>
                   <a href='./dental/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/Education.png'
-                    className='facultyImg'
-                  />
+                  <img src={educationImg} className='facultyImg' />
                   <h3 className='facultyName'>Education</h3>
                   <a href='./education/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/EngineeringTechnology.png'
-                    className='facultyImg'
-                  />
+                  <img src={educationImg} className='facultyImg' />
                   <h3 className='facultyName'>Engineering and Technology</h3>
                   <a href='./engineering/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/FashionDesign.png'
-                    className='facultyImg'
-                  />
+                  <img src={fashionDesignImg} className='facultyImg' />
                   <h3 className='facultyName'>Fashion & Design</h3>
                   <a href='./fashion/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/HotelTourism.png'
-                    className='facultyImg'
-                  />
+                  <img src={hotelTourismImg} className='facultyImg' />
                   <h3 className='facultyName'>Hotel & Tourism Management</h3>
                   <a href='./htm/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/Ayurveda.png'
-                    className='facultyImg'
-                  />
+                  <img src={aryuvedaImg} className='facultyImg' />
                   <h3 className='facultyName'>
                     Indian Medical System (Ayurveda)
                   </h3>
@@ -122,30 +116,21 @@ const FacultySection = () => {
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/Law.png'
-                    className='facultyImg'
-                  />
+                  <img src={lawImg} className='facultyImg' />
                   <h3 className='facultyName'>Law</h3>
                   <a href='./law/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/MedicineHealthSciences.png'
-                    className='facultyImg'
-                  />
+                  <img src={medicineHealthSciencesImg} className='facultyImg' />
                   <h3 className='facultyName'>Medicine & Health Sciences</h3>
                   <a href='./medical/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/MassMedia.png'
-                    className='facultyImg'
-                  />
+                  <img src={massMediaImg} className='facultyImg' />
                   <h3 className='facultyName'>
                     Mass Communication & Media Technology
                   </h3>
@@ -154,10 +139,7 @@ const FacultySection = () => {
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/Nursing.png'
-                    className='facultyImg'
-                  />
+                  <img src={nursingImg} className='facultyImg' />
                   <h3 className='facultyName'>Nursing</h3>
                   <a href='./nursing/index.html'></a>
                 </div>
@@ -165,7 +147,7 @@ const FacultySection = () => {
               <div className='swiper-slide'>
                 <div className='facultyBox'>
                   <img
-                    src='assets/images/homepage/faculty/NaturopathyYogicSciences.png'
+                    src={naturopathyYogicSciencesImg}
                     className='facultyImg'
                   />
                   <h3 className='facultyName'>
@@ -176,30 +158,21 @@ const FacultySection = () => {
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/Physiotherapy.png'
-                    className='facultyImg'
-                  />
+                  <img src={physiotherapyImg} className='facultyImg' />
                   <h3 className='facultyName'>Physiotherapy</h3>
                   <a href='./physiotherapy/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/science.png'
-                    className='facultyImg'
-                  />
+                  <img src={scienceImg} className='facultyImg' />
                   <h3 className='facultyName'>Science</h3>
                   <a href='./science/index.html'></a>
                 </div>
               </div>
               <div className='swiper-slide'>
                 <div className='facultyBox'>
-                  <img
-                    src='assets/images/homepage/faculty/Pharmacy.png'
-                    className='facultyImg'
-                  />
+                  <img src={pharmacyImg} className='facultyImg' />
                   <h3 className='facultyName'>Pharmacy</h3>
                   <a href='./pharmacy/index.html'></a>
                 </div>

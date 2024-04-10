@@ -1,23 +1,23 @@
-const tabs = document.querySelectorAll('.tab');
-const searchBox = document.getElementById('searchInput');
-const cardContainer = document.querySelector('.card-container');
+const tabs = document.querySelectorAll(".tab");
+const searchBox = document.getElementById("searchInput");
+const cardContainer = document.querySelector(".card-container");
 
 function renderCards(cards) {
   cardContainer.innerHTML = "";
   cards.forEach((card) => {
     cardContainer.innerHTML += `
-        <div id="${card.name}" class="flex colored-faculty-section">
-          <div class="w-1/5">
-            <img src="${card.image}" alt="${card.name}" class="insideFacultyImg">
+        <div id="${card.name}" className="flex colored-faculty-section">
+          <div className="w-1/5">
+            <img src="${card.image}" alt="${card.name}" className="insideFacultyImg">
           </div>
-          <div class="inside-faculty-section w-4/5">
-            <div class="inside-faculty-content px-3 md:px-8">
+          <div className="inside-faculty-section w-4/5">
+            <div className="inside-faculty-content px-3 md:px-8">
               <div>
-                <h2 class="cardTitle">${card.name}</h1>
-                <p class="">${card.descp}</p>
+                <h2 className="cardTitle">${card.name}</h1>
+                <p className="">${card.descp}</p>
               </div>
-              <div class="flex justify-end programme-info">
-                <a href="${card.link}" class="circleBtn cBtnBlack">More Info</a>
+              <div className="flex justify-end programme-info">
+                <a href="${card.link}" className="circleBtn cBtnBlack">More Info</a>
               </div>
             </div>
           </div>
@@ -55,9 +55,8 @@ tabs.forEach((tab) => {
 searchBox.addEventListener("keyup", () => {
   const keyword = searchBox.value.trim().toLowerCase();
   renderCards(
-    data[getActiveTabType()]
-      .filter((card) => card.name.toLowerCase().includes(keyword))
+    data[getActiveTabType()].filter((card) =>
+      card.name.toLowerCase().includes(keyword)
+    )
   );
 });
-
-
