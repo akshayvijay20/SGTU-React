@@ -1,0 +1,40 @@
+.animateThis {
+  position: relative;
+  will-change: opacity transform;
+}
+.slideLeft {
+  opacity: 0;
+  transition: all 0.6s ease;
+  transform: translate3d(100px, 0px, 0px);
+}
+.slideLeft.in-view {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+.slideRight {
+  opacity: 0;
+  transition: all 0.6s ease;
+  transform: translate3d(-100px, 0px, 0px);
+}
+.slideRight.in-view {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+.slideTop {
+  opacity: 0;
+  transition: all 0.6s ease;
+  transform: translate3d(0px, 100px, 0px);
+}
+.slideTop.in-view {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+.slideBottom {
+  opacity: 0;
+  transition: all 0.6s ease;
+  transform: translate3d(0px, -80px, 0px);
+}
+.slideBottom.in-view {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}

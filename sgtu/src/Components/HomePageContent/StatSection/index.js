@@ -16,34 +16,6 @@ import pngOnlineCourse from "./Assets/Images/onlineCourse.png";
 //slide animation is not working
 
 const StatSection = () => {
-  // useEffect(() => {
-  //   const elements = document.querySelectorAll(".animateThis");
-  //   elements.forEach((element) => {
-  //     const rect = element.getBoundingClientRect();
-  //     const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
-  //     if (isInView) {
-  //       element.classList.add("in-view");
-  //     }
-  //   });
-
-  //   const handleScroll = () => {
-  //     elements.forEach((element) => {
-  //       const rect = element.getBoundingClientRect();
-  //       const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
-  //       if (isInView) {
-  //         element.classList.add("in-view");
-  //       }
-  //     });
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //     elements.forEach((element) => {
-  //       element.classList.remove("in-view");
-  //     });
-  //   };
-  // }, []);
   return (
     <section className='statSection my-14 lg:my-20'>
       <div className='container mx-auto px-3'>

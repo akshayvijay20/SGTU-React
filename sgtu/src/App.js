@@ -13,6 +13,10 @@ import BlogList from "./utils/Blogs";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import HomePageContent from "./Components/HomePageContent";
+import $ from "jquery";
+import Swiper from "swiper";
+import { gtag, install } from "ga-gtag";
+
 const blogData = [
   {
     title:
@@ -93,31 +97,114 @@ const blogData = [
 ];
 
 const App = () => {
-  useEffect(() => {
-    const elements = document.querySelectorAll(".animateThis");
+  // Google Tag Manager
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      "gtm.start": new Date().getTime(),
+      event: "gtm.js"
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-P26BL67");
 
-    const handleScroll = () => {
-      elements.forEach((element) => {
-        const rect = element.getBoundingClientRect();
-        const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+  // Global site tag (gtag.js) - Google Ads: 764243198
 
-        if (isInView && !element.classList.contains("in-view")) {
-          element.classList.add("in-view");
-        } else if (!isInView && element.classList.contains("in-view")) {
-          element.classList.remove("in-view");
-        }
-      });
-    };
+  // window.dataLayer = window.dataLayer || [];
+  // function gtag() {
+  //   dataLayer.push(arguments);
+  // }
+  // gtag("js", new Date());
 
-    window.addEventListener("scroll", handleScroll);
+  // gtag("config", "AW-764243198");
+  /* Press Swiper Script */
 
-    // Initial check on component mount
-    handleScroll();
+  const breakpoint = window.matchMedia("(max-width:1024px)");
+  let pressSwiper;
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const breakpointChecker = function () {
+    if (breakpoint.matches === true) {
+      if (pressSwiper !== undefined) pressSwiper.destroy(true, true);
+      return;
+    } else if (breakpoint.matches === false) {
+      return enableSwiper();
+    }
+  };
+  const enableSwiper = function () {
+    const pressSwiper = new Swiper(".pressSwiper", {
+      speed: 1000,
+      loop: true,
+      direction: "vertical",
+      slidesPerView: 4,
+      spaceBetween: 20,
+      autoplay: { delay: 3000, disableOnInteraction: false }
+    });
+  };
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
+
+  /* Press Swiper Script Ends */
+
+  /*  ---------- ON-SCROLL ANIMATION ------------  */
+  var $animation_elements = $(".animateThis");
+  var $window = $(window);
+
+  function check_if_in_view() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = window_top_position + window_height;
+
+    $.each($animation_elements, function () {
+      var $element = $(this);
+      var element_height = $element.outerHeight();
+      var element_top_position = $element.offset().top + 150;
+      var element_bottom_position = element_top_position + element_height;
+
+      //check to see if this current container is within viewport ----
+      // if ((element_top_position <= window_bottom_position) && (element_bottom_position >= window_top_position))  {
+
+      if (element_top_position <= window_bottom_position) {
+        $element.addClass("in-view");
+      } else {
+        $element.removeClass("in-view");
+      }
+    });
+  }
+
+  $window.on("scroll resize", check_if_in_view);
+  $window.trigger("scroll");
+
+  // Meta Pixel Code
+  // !(function (f, b, e, v, n, t, s) {
+  //   if (f.fbq) return;
+  //   n = f.fbq = function () {
+  //     n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+  //   };
+  //   if (!f._fbq) f._fbq = n;
+  //   n.push = n;
+  //   n.loaded = !0;
+  //   n.version = "2.0";
+  //   n.queue = [];
+  //   t = b.createElement(e);
+  //   t.async = !0;
+  //   t.src = v;
+  //   s = b.getElementsByTagName(e)[0];
+  //   s.parentNode.insertBefore(t, s);
+  // })(
+  //   window,
+  //   document,
+  //   "script",
+  //   "https://connect.facebook.net/en_US/fbevents.js"
+  // );
+  // fbq("init", "380039900248851");
+  // fbq("track", "PageView");
+
+
+
 
   return (
     <div className='App'>
